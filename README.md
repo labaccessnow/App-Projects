@@ -1,10 +1,13 @@
 # Application Projects
 
-Practical software that supports network and infrastructure operations.
+Practical software that makes infrastructure and network operations easier to run.
 
-## Focus
-- Python tooling and CLIs for provisioning, monitoring, and reporting
-- Integrations built against vendor REST APIs
-- Local services with semantic search / retrieval over operational data
+## What I build
+- **Python tooling & CLIs** — provisioning, monitoring, and reporting utilities for the
+  network and virtualization estate.
+- **Vendor-API integrations** — pulling and correlating data from network and platform
+  REST APIs for custom reporting.
+- **Local services** — including semantic search / retrieval over operational notes and
+  documentation.
 
-Engineering-adjacent software, written to make the infrastructure easier to run.
+Engineering-adjacent software — written to solve real operational problems, not demos.
