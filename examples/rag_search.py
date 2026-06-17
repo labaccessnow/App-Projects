@@ -2,7 +2,8 @@
 """Minimal RAG retrieval core: embed notes, index them, retrieve context for an LLM.
    pip install sentence-transformers faiss-cpu numpy
 """
-import faiss, numpy as np
+import faiss
+import numpy as np
 from sentence_transformers import SentenceTransformer
 
 MODEL = SentenceTransformer("all-MiniLM-L6-v2")

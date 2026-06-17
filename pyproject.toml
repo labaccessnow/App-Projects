@@ -1,0 +1,26 @@
+# Packaging so these tools install with a console entry point, not "clone and hope."
+[project]
+name = "ops-tools"
+version = "0.1.0"
+description = "Small, dependable tools for network and infrastructure operations."
+requires-python = ">=3.10"
+dependencies = [
+  "click>=8.1",
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  "mcp>=1.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+net-cli = "net_cli:cli"        # `pip install .` then run `net-cli reachable <host>`
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["examples"]

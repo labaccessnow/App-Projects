@@ -3,6 +3,20 @@
 Practical software that makes infrastructure and network operations easier to run — small,
 dependable tools, increasingly with a retrieval/LLM layer so operational knowledge is searchable.
 
+## What's in this repo
+Runnable examples — a CLI, a service, an MCP server, the RAG core, tests, and packaging:
+
+| File | What it shows |
+|---|---|
+| [`examples/net_cli.py`](examples/net_cli.py) | A **cron-safe CLI** (Click) that exits with a meaningful code |
+| [`examples/api_service.py`](examples/api_service.py) | A minimal **FastAPI** service — health + read-only lookup |
+| [`examples/mcp_server.py`](examples/mcp_server.py) | An **MCP server** — expose ops tools to an LLM over stdio |
+| [`examples/rag_search.py`](examples/rag_search.py) | The **RAG core** — embed, index, retrieve grounding context |
+| [`examples/test_net_cli.py`](examples/test_net_cli.py) | **pytest** — the boring 20% that makes a tool safe unattended |
+| [`pyproject.toml`](pyproject.toml) + [`.github/workflows/test.yml`](.github/workflows/test.yml) | **Packaging** (console entry point) + **CI** (ruff + pytest) |
+
+> Placeholders/stubs where a real data source would plug in; nothing sensitive is committed.
+
 ## What it looks like in practice
 
 A minimal RAG core: embed your real runbooks/notes, index them, and retrieve the relevant chunks
